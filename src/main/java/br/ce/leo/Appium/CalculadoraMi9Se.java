@@ -36,6 +36,8 @@ public class CalculadoraMi9Se {
 			MobileElement aceitar = driver.findElementById("android:id/button1");
 
 			aceitar.click();
+			
+	//tratamento de erro
 
 		}
 
