@@ -6,16 +6,15 @@ import static org.junit.Assert.assertTrue;
 
 import java.net.MalformedURLException;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.ce.leo.Appium.core.DriverFactory;
+import br.ce.leo.Appium.core.BaseTest;
 import br.ce.leo.Appium.page.FormularioPage;
 import br.ce.leo.Appium.page.MenuPage;
 
-public class Formulario_Caso_Teste {
+public class Formulario_Caso_Teste extends BaseTest {
 
 	private MenuPage menu = new MenuPage();
 	private FormularioPage page = new FormularioPage();
@@ -23,12 +22,6 @@ public class Formulario_Caso_Teste {
 	@Before
 	public void InicializarAppium() throws MalformedURLException {
 		menu.acessarFormulario();
-	}
-
-	@After
-	public void tearDown() {
-		DriverFactory.killDriver();
-
 	}
 
 	@Test

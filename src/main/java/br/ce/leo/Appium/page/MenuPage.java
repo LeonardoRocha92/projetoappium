@@ -1,14 +1,12 @@
 package br.ce.leo.Appium.page;
 
-import br.ce.leo.Appium.core.DSL;
+import br.ce.leo.Appium.core.BasePage;
 
-public class MenuPage {
-	
-	private DSL dsl = new DSL();
-	
-	public  void acessarFormulario(){
-		
-		dsl.clicarPorTexto("Formulário");
+public class MenuPage extends BasePage {
+
+	public void acessarFormulario() {
+
+		clicarPorTexto("Formulário");
 	}
 
 }

@@ -1,12 +1,10 @@
 package br.ce.leo.Appium.core;
 
 import static br.ce.leo.Appium.core.DriverFactory.getDriver;
-import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.By;
 
-public class DSL {
-
+public class BasePage {
 	public void escrever(By by, String texto) {
 		getDriver().findElement(by).sendKeys(texto);
 
@@ -21,10 +19,10 @@ public class DSL {
 		getDriver().findElement(by).click();
 		clicarPorTexto(valor);
 	}
-	
+
 	public void clicar(By by) {
 		getDriver().findElement(by).click();
-		
+
 	}
 
 	public void clicarPorTexto(String texto) {
