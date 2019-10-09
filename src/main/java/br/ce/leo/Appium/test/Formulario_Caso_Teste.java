@@ -9,8 +9,12 @@ import java.net.MalformedURLException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.ce.leo.Appium.core.BaseTest;
+import br.ce.leo.Appium.core.DriverFactory;
 import br.ce.leo.Appium.page.FormularioPage;
 import br.ce.leo.Appium.page.MenuPage;
 
@@ -70,6 +74,21 @@ public class Formulario_Caso_Teste extends BaseTest {
 		Assert.assertEquals("Console: ps4", page.obterConsoleCadastrado());
 		Assert.assertTrue(page.obterSwitchCadastrado().endsWith("Off"));
 		Assert.assertTrue(page.obterCheckCadastrado().endsWith("Marcado"));
+	}
+
+	@Test
+	public void deveRealizarCadastroDemorado() throws MalformedURLException {
+
+		page.escreverNome("Leonardo");
+
+		page.salvarDemorado();
+		//esperar(3000); 
+
+		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text=' Name: Leonardo']")));
+
+		assertEquals("Nome: Leonardo", page.obterNomeCadastrado());
+
 	}
 
 }

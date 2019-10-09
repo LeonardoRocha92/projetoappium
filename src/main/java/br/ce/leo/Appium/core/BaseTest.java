@@ -30,11 +30,20 @@ public class BaseTest {
 	}
 
 	public void gerarScreenShot() {
-		
+
 		try {
-			File imagem = ((TakesScreenshot)DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
+			File imagem = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(imagem, new File("target/screenshots/" + testName.getMethodName() + ".png"));
 		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void esperar(long tempo) {
+
+		try {
+			Thread.sleep(tempo);
+		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
