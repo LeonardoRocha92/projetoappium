@@ -1,4 +1,4 @@
-package br.ce.leo.Appium.core;
+package apoio;
 
 import java.io.File;
 import java.io.IOException;

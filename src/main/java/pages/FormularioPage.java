@@ -1,8 +1,8 @@
-package br.ce.leo.Appium.page;
+package pages;
 
 import org.openqa.selenium.By;
 
-import br.ce.leo.Appium.core.BasePage;
+import apoio.BasePage;
 import io.appium.java_client.MobileBy;
 
 public class FormularioPage extends BasePage{

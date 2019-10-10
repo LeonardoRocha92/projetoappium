@@ -1,4 +1,4 @@
-package br.ce.leo.Appium.test;
+package casosTeste;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -13,12 +13,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import br.ce.leo.Appium.core.BaseTest;
-import br.ce.leo.Appium.core.DriverFactory;
-import br.ce.leo.Appium.page.FormularioPage;
-import br.ce.leo.Appium.page.MenuPage;
+import apoio.BaseTest;
+import apoio.DriverFactory;
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
+import pages.FormularioPage;
+import pages.MenuPage;
 
-public class Formulario_Caso_Teste extends BaseTest {
+public class FormularioTest extends BaseTest {
 
 	private MenuPage menu = new MenuPage();
 	private FormularioPage page = new FormularioPage();
@@ -82,12 +84,30 @@ public class Formulario_Caso_Teste extends BaseTest {
 		page.escreverNome("Leonardo");
 
 		page.salvarDemorado();
-		//esperar(3000); 
+		// esperar(3000);
 
 		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text=' Name: Leonardo']")));
 
 		assertEquals("Nome: Leonardo", page.obterNomeCadastrado());
+
+	}
+
+	@Test
+	public void deveAlterarData() {
+		page.clicarPorTexto("01/01/2000");
+		page.clicarPorTexto("20");
+		page.clicarPorTexto("OK");
+		Assert.assertTrue(page.existeElementoPorTexto("20/2/2000"));
+	}
+	
+	@Test
+	public void deveAlterarHora(){
+		page.clicarPorTexto("06:00");
+		page.clicar(MobileBy.AccessibilityId("10"));
+		page.clicar(MobileBy.AccessibilityId("40"));
+		page.clicarPorTexto("OK");
+		Assert.assertTrue(page.existeElementoPorTexto("10:40"));
 
 	}
 

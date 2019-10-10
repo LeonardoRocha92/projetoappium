@@ -1,10 +1,10 @@
-package br.ce.leo.Appium.test;
+package casosTeste;
 
 import org.junit.Test;
 
-import br.ce.leo.Appium.core.BaseTest;
-import br.ce.leo.Appium.page.MenuPage;
-import br.ce.leo.Appium.page.SplashPage;
+import apoio.BaseTest;
+import pages.MenuPage;
+import pages.SplashPage;
 
 public class SplashTest extends BaseTest {
 

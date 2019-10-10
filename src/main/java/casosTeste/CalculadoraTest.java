@@ -1,4 +1,4 @@
-package br.ce.leo.Appium.test;
+package casosTeste;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -10,7 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class CalculadoraTeste {
+public class CalculadoraTest {
 	
 	
 	@Test

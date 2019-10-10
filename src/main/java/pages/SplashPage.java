@@ -1,4 +1,4 @@
-package br.ce.leo.Appium.page;
+package pages;
 
 import java.util.concurrent.TimeUnit;
 
@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import br.ce.leo.Appium.core.BasePage;
-import br.ce.leo.Appium.core.DriverFactory;
+import apoio.BasePage;
+import apoio.DriverFactory;
 
 public class SplashPage extends BasePage {
 

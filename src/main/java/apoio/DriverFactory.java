@@ -1,4 +1,4 @@
-package br.ce.leo.Appium.core;
+package apoio;
 
 import java.net.MalformedURLException;
 import java.net.URL;

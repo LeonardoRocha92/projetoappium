@@ -1,6 +1,6 @@
-package br.ce.leo.Appium.page;
+package pages;
 
-import br.ce.leo.Appium.core.BasePage;
+import apoio.BasePage;
 
 public class MenuPage extends BasePage {
 
@@ -12,6 +12,16 @@ public class MenuPage extends BasePage {
 	public void acessarSplash(){
 		
 		clicarPorTexto("Splash");
+	}
+	
+	public void acessarAlertas(){
+		
+		clicarPorTexto("Alertas");
+	}
+
+	public void acessarAbas() {
+		clicarPorTexto("Abas");
+
 	}
 
 }

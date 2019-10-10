@@ -1,6 +1,6 @@
-package br.ce.leo.Appium.core;
+package apoio;
 
-import static br.ce.leo.Appium.core.DriverFactory.getDriver;
+import static apoio.DriverFactory.getDriver;
 
 import java.util.List;
 
